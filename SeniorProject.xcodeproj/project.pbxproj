@@ -15,6 +15,8 @@
 		8B72B6931E3AA07D00BAE70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B72B6911E3AA07D00BAE70C /* LaunchScreen.storyboard */; };
 		8B72B69E1E3AA07D00BAE70C /* SeniorProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B69D1E3AA07D00BAE70C /* SeniorProjectTests.swift */; };
 		8B72B6A91E3AA07D00BAE70C /* SeniorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6A81E3AA07D00BAE70C /* SeniorProjectUITests.swift */; };
+		8B72B6BD1E3ABBC400BAE70C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6BC1E3ABBC400BAE70C /* HomeModel.swift */; };
+		8B72B6BF1E3ABBD600BAE70C /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8B72B6A41E3AA07D00BAE70C /* SeniorProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeniorProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B72B6A81E3AA07D00BAE70C /* SeniorProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorProjectUITests.swift; sourceTree = "<group>"; };
 		8B72B6AA1E3AA07D00BAE70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B72B6BC1E3ABBC400BAE70C /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				8B72B6911E3AA07D00BAE70C /* LaunchScreen.storyboard */,
 				8B72B6941E3AA07D00BAE70C /* Info.plist */,
 				8B72B68C1E3AA07D00BAE70C /* SeniorProject.xcdatamodeld */,
+				8B72B6BC1E3ABBC400BAE70C /* HomeModel.swift */,
+				8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */,
 			);
 			path = SeniorProject;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 			files = (
 				8B72B6881E3AA07D00BAE70C /* ViewController.swift in Sources */,
 				8B72B68E1E3AA07D00BAE70C /* SeniorProject.xcdatamodeld in Sources */,
+				8B72B6BD1E3ABBC400BAE70C /* HomeModel.swift in Sources */,
+				8B72B6BF1E3ABBD600BAE70C /* LocationModel.swift in Sources */,
 				8B72B6861E3AA07D00BAE70C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
