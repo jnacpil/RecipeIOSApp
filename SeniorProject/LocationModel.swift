@@ -11,12 +11,12 @@ import Foundation
 class LocationModel: NSObject {
     
     //properties
-    var id: Int?
-    var name: String?
-    var address: String?
-    var latitude: String?
-    var longitude: String?
-    var type: Int?
+    var mID: Int?
+    var mName: String?
+    var mAddress: String?
+    var mLatitude: String?
+    var mLongitude: String?
+    var mType: Int?
     
     //empty constructor
     override init()
@@ -26,20 +26,20 @@ class LocationModel: NSObject {
     
     //construct with @id, @name, @addess, @latitude, @longitude, @type
     
-    init(id: Int, name: String, address: String, latitude: String, longitude: String, type: Int)
+    init(mID: Int, mName: String, mAddress: String, mLatitude: String, mLongitude: String, mType: Int)
     {
-        self.id = id
-        self.name = name
-        self.address = address
-        self.latitude = latitude
-        self.longitude = longitude
-        self.type = type
+        self.mID = mID
+        self.mName = mName
+        self.mAddress = mAddress
+        self.mLatitude = mLatitude
+        self.mLongitude = mLongitude
+        self.mType = mType
         
     }
     
     //print object's current state
     
     override var description: String {
-        return "Id: \(id), Name: \(name), Address: \(address), Latitude: \(latitude), Longitude: \(longitude), Type: \(type)"
+        return "Id: \(mID), Name: \(mName), Address: \(mAddress), Latitude: \(mLatitude), Longitude: \(mLongitude), Type: \(mType)"
     }
 }
