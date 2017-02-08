@@ -18,9 +18,8 @@
 		8B72B6BD1E3ABBC400BAE70C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6BC1E3ABBC400BAE70C /* HomeModel.swift */; };
 		8B72B6BF1E3ABBD600BAE70C /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */; };
 		8B72B6C11E3C330800BAE70C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6C01E3C330800BAE70C /* DetailViewController.swift */; };
-		8B72B6C41E3EBB6D00BAE70C /* ER Diagram (SenPr).png in Resources */ = {isa = PBXBuildFile; fileRef = 8B72B6C21E3EBB6D00BAE70C /* ER Diagram (SenPr).png */; };
-		8B72B6C51E3EBB6D00BAE70C /* Used Cases (SenPr).png in Resources */ = {isa = PBXBuildFile; fileRef = 8B72B6C31E3EBB6D00BAE70C /* Used Cases (SenPr).png */; };
 		8B72B6CC1E43B2E900BAE70C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B72B6CB1E43B2E800BAE70C /* MapKit.framework */; };
+		8B72B6D01E4403E000BAE70C /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +57,8 @@
 		8B72B6BC1E3ABBC400BAE70C /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		8B72B6C01E3C330800BAE70C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		8B72B6C21E3EBB6D00BAE70C /* ER Diagram (SenPr).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ER Diagram (SenPr).png"; path = "../../../Downloads/ER Diagram (SenPr).png"; sourceTree = "<group>"; };
-		8B72B6C31E3EBB6D00BAE70C /* Used Cases (SenPr).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Used Cases (SenPr).png"; path = "../../../Downloads/Used Cases (SenPr).png"; sourceTree = "<group>"; };
 		8B72B6CB1E43B2E800BAE70C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeModel.swift; path = ../RecipeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +111,10 @@
 		8B72B6841E3AA07D00BAE70C /* SeniorProject */ = {
 			isa = PBXGroup;
 			children = (
+				8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */,
 				8B72B6851E3AA07D00BAE70C /* AppDelegate.swift */,
 				8B72B6871E3AA07D00BAE70C /* ViewController.swift */,
 				8B72B6891E3AA07D00BAE70C /* Main.storyboard */,
-				8B72B6C21E3EBB6D00BAE70C /* ER Diagram (SenPr).png */,
-				8B72B6C31E3EBB6D00BAE70C /* Used Cases (SenPr).png */,
 				8B72B6C01E3C330800BAE70C /* DetailViewController.swift */,
 				8B72B68F1E3AA07D00BAE70C /* Assets.xcassets */,
 				8B72B6911E3AA07D00BAE70C /* LaunchScreen.storyboard */,
@@ -266,9 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B72B6931E3AA07D00BAE70C /* LaunchScreen.storyboard in Resources */,
-				8B72B6C51E3EBB6D00BAE70C /* Used Cases (SenPr).png in Resources */,
 				8B72B6901E3AA07D00BAE70C /* Assets.xcassets in Resources */,
-				8B72B6C41E3EBB6D00BAE70C /* ER Diagram (SenPr).png in Resources */,
 				8B72B68B1E3AA07D00BAE70C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B72B6D01E4403E000BAE70C /* RecipeModel.swift in Sources */,
 				8B72B6881E3AA07D00BAE70C /* ViewController.swift in Sources */,
 				8B72B68E1E3AA07D00BAE70C /* SeniorProject.xcdatamodeld in Sources */,
 				8B72B6BD1E3ABBC400BAE70C /* HomeModel.swift in Sources */,

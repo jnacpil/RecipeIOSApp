@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2z-xF-YLD" id="egu-hd-5VT">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <frame key="frameInset" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -76,6 +76,24 @@
             <point key="canvasLocation" x="1856.8" y="138.98050974512745"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="niz-Y4-Zt8">
+            <objects>
+                <viewController id="cIT-kM-X8f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JRV-qq-ahA"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Op-LH-nq9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSr-zY-thK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9O-0N-gmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="-521"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="SzS-IC-BNu">
             <objects>
                 <viewController id="8kr-op-riZ" sceneMemberID="viewController">
@@ -96,9 +114,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cff-Ir-RGs">
-                                <frame key="frameInset" minX="160" minY="318" width="55" height="30"/>
+                                <frame key="frameInset" minX="164" minY="318" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recipes"/>
+                                <state key="normal" title="Search"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-Ft-nfv">
                                 <frame key="frameInset" minX="165" minY="239" width="45" height="30"/>
