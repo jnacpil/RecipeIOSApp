@@ -14,9 +14,6 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     var feedItems: NSArray = NSArray()
     var selectedIngredient: RecipeModel = RecipeModel()
     @IBOutlet weak var listTableView: UITableView!
-    
-  
-    
 
     
     

@@ -12,9 +12,9 @@ class RecipeModel: NSObject {
     //properties
     var rID: Int?
     var rName: String?
-    var rPreptime: Int?
-    var rCooktime: Int?
-    var rServings: Int?
+    var rPreptime: String?
+    var rCooktime: String?
+    var rServings: String?
     var rDirections: String?
     var rLink: String?
     
@@ -26,7 +26,7 @@ class RecipeModel: NSObject {
     
     //construct with @id, @name, @addess, @latitude, @longitude, @type
     
-    init(rID: Int, rName: String, rPreptime: Int, rCooktime: Int, rServings: Int, rDirections: String, rLink: String)
+    init(rID: Int, rName: String, rPreptime: String, rCooktime: String, rServings: String, rDirections: String, rLink: String)
     {
         self.rID = rID
         self.rName = rName

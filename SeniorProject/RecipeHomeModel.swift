@@ -94,9 +94,9 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
             
             recipe.rID = jsonElement["rID"] as? Int
             recipe.rName = jsonElement["rName"] as? String
-            recipe.rPreptime = jsonElement["rPreptime"] as? Int
-            recipe.rCooktime = jsonElement["rCooktime"] as? Int
-            recipe.rServings = jsonElement["rServings"] as? Int
+            recipe.rPreptime = jsonElement["rPreptime"] as? String
+            recipe.rCooktime = jsonElement["rCooktime"] as? String
+            recipe.rServings = jsonElement["rServings"] as? String
             recipe.rDirections = jsonElement["rDirections"] as? String
             recipe.rLink = jsonElement["rLink"] as? String
             
