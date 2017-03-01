@@ -11,10 +11,11 @@ import Foundation
 class IngredientModel: NSObject {
     
     //properties
-    var iID: Int?
+    var iID: String?
+    var rID: String?
     var iName: String?
-    var availAmount: Int?
-    var iUnit: Int?
+    var availAmount: String?
+    var iUnit: String?
     var uName: String?
     
     //empty constructor
@@ -25,9 +26,10 @@ class IngredientModel: NSObject {
     
     
     
-    init(iID: Int, iName: String, availAmount: Int, iUnit: Int, uName: String)
+    init(iID: String, rID: String, iName: String, availAmount: String, iUnit: String, uName: String)
     {
         self.iID = iID
+        self.rID = rID
         self.iName = iName
         self.availAmount = availAmount
         self.iUnit = iUnit
@@ -37,6 +39,6 @@ class IngredientModel: NSObject {
     //print object's current state
     
     override var description: String {
-        return "Id: \(iID), Name: \(iName), AvailableAmount: \(availAmount), Unit: \(uName)"
+        return "Id: \(iID), rID: \(rID), Name: \(iName), AvailableAmount: \(availAmount), Unit: \(uName)"
     }
 }

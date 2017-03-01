@@ -11,7 +11,6 @@ import UIKit
 class SearchFieldViewController: UIViewController {
     @IBOutlet weak var PrepTimeTF: UITextField!
     @IBOutlet weak var CookTimeTF: UITextField!
-    @IBOutlet weak var IngredientTF: UITextField!
     @IBOutlet weak var EntreeTF: UITextField!
     
     
@@ -33,7 +32,6 @@ class SearchFieldViewController: UIViewController {
             
             svc.passedPrepTime = PrepTimeTF.text
             svc.passedCookTime = CookTimeTF.text
-            svc.passedIngredient = IngredientTF.text
             svc.passedEntree = EntreeTF.text
            
         }

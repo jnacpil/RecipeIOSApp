@@ -1,33 +1,26 @@
 //
-//  PantryViewController.swift
+//  SearchPantryViewController.swift
 //  SeniorProject
 //
-//  Created by Janelle Nacpil on 2/9/17.
+//  Created by Janelle Nacpil on 2/28/17.
 //  Copyright © 2017 Janelle Nacpil. All rights reserved.
 //
 
 import UIKit
 
-class PantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IngredientHomeModelProtocal {
+class SearchPantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IngredientHomeModelProtocal  {
+    
     
     var feedItems: NSArray = NSArray()
-    //var selectedIngredient: IngredientModel = IngredientModel()
-    var selectedRecipeID: String?
-    var filteredItems = [IngredientModel]()
-    //var allrecipes = [IngredientModel]()
-    
-    
-    
-    
-    
+    var selectedIngredient: IngredientModel = IngredientModel()
+    var compareArray = [IngredientModel]()
     @IBOutlet weak var listTableView: UITableView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
         
-        
-        print(selectedRecipeID)
         
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
@@ -37,15 +30,13 @@ class PantryViewController: UIViewController, UITableViewDataSource, UITableView
         ingredientModel.downloadItems()
         
         listTableView.tableFooterView = UIView()
-
-        // Do any additional setup after loading the view.
     }
+    
     
     
     func itemsDownloaded(items: NSArray) {
         feedItems = items
-        
-        
+        let compare: NSMutableArray = NSMutableArray()
         
         for i in 0..<(feedItems.count)
         {
@@ -53,40 +44,47 @@ class PantryViewController: UIViewController, UITableViewDataSource, UITableView
             let itemtofilter = feedItems[i] as! IngredientModel
             print("feedItem")
             print(feedItems[i])
-
             
-            while(filter == true){
+            
+            while(filter == true)
+            {
                 
-                var passedfilter: Bool = false
+                //var passedfilter: Bool = false
+                print(itemtofilter.availAmount!)
+                let intAvail: Int = Int(itemtofilter.availAmount!)!
+                print(intAvail)
                 
-                if(selectedRecipeID == itemtofilter.rID)
-                {
-                    //print(itemtofilter)
-                    passedfilter = true
-                    
-                }
-               
-                print(passedfilter, filter)
-                if(passedfilter == true)
+                if(intAvail != 0)
                 {
                     
-                    filteredItems.append(itemtofilter)
+                    if (compare.contains(itemtofilter.iID!))
+                    {
+                        filter = false
+                    }
+                    else
+                    {
+                        compare.add(itemtofilter.iID!)
+                        compareArray.append(itemtofilter)
+                        filter = false
+                    }
                     
-                    filter = false
                 }else
                 {
                     filter = false
                 }
+                
             }
             
+            
         }
-        print(filteredItems)
+        print(compare)
+        print(compareArray)
         self.listTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return filteredItems.count
+        return compareArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -95,35 +93,14 @@ class PantryViewController: UIViewController, UITableViewDataSource, UITableView
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         
-        let item: IngredientModel = filteredItems[indexPath.row] 
+        
+        let item: IngredientModel = compareArray[indexPath.row] 
         
         
         myCell.textLabel!.text = item.iName
         
         return myCell
     }
-    
-    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        
-        selectedIngredient = feedItems[indexPath.row]as! IngredientModel
-        
-        self.performSegue(withIdentifier: "detailSegue", sender: self)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let detailVC = segue.destination as! DetailViewController
-        
-        detailVC.selectedIngredient = selectedIngredient
-        
-        print("HEEEEEY")
-        print(detailVC.selectedIngredient)
-        
-        
-    }*/
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -142,3 +119,4 @@ class PantryViewController: UIViewController, UITableViewDataSource, UITableView
     */
 
 }
+

@@ -10,14 +10,14 @@ import UIKit
 
 class FieldsResultViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, RecipeHomeModelProtocal {
     
-    var passedPrepTime: String?
-    var passedCookTime: String?
-    var passedIngredient: String?
-    var passedEntree: String?
+    var passedPrepTime: String!
+    var passedCookTime: String!
+    var passedEntree: String!
     
     var feedItems: NSArray = NSArray()
-    var filteredItems: NSMutableArray = NSMutableArray()
-    var selectedIngredient: RecipeModel = RecipeModel()
+    //var filteredItems: NSMutableArray = NSMutableArray()
+    var filteredItems = [RecipeModel]()
+    var selectedRecipe: RecipeModel = RecipeModel()
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -45,25 +45,24 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
     func itemsDownloaded(items: NSArray) {
         feedItems = items
         
-        
-        
-        
-        
         for i in 0..<(feedItems.count)
         {
             var filter: Bool = true
-            let itemtofilter: RecipeModel = feedItems[i] as! RecipeModel
+            //let itemtofilter: RecipeModel = feedItems[i] as! RecipeModel
+            let itemtofilter = feedItems[i] as! RecipeModel
+            print("feedItem")
+            print(feedItems[i])
+            let rName = itemtofilter.rName!
+            print(rName)
             
-            print(passedPrepTime)
-            print(passedCookTime)
-            print(passedEntree)
+           
             while(filter == true){
                 
                 var passedfilter: Bool = false
             
             if(passedPrepTime != "")
             {
-                print(itemtofilter)
+                //print(itemtofilter)
                 
                 
                 if(passedPrepTime == itemtofilter.rPreptime)
@@ -72,7 +71,7 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
                 }else{
                     filter = false
                 }
-                print(passedfilter, filter)
+                //print(passedfilter, filter)
             }
             if(passedCookTime != "")
             {
@@ -83,7 +82,7 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
                 {
                     filter = false
                 }
-                print("Cooktime", passedfilter, filter)
+                //print("Cooktime", passedfilter, filter)
             }
             if(passedEntree != "")
             {
@@ -95,12 +94,13 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
                     filter = false
                 }
                 
-                print("Entree", passedfilter, filter)
+                //print("Entree", passedfilter, filter)
             }
             print(passedfilter, filter)
             if(passedfilter == true)
             {
-                filteredItems.add(itemtofilter)
+                
+                filteredItems.append(itemtofilter)
                 filter = false
             }else
             {
@@ -133,6 +133,29 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
         myCell.textLabel!.text = item.rName
         
         return myCell
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        selectedRecipe = filteredItems[indexPath.row]
+        
+        self.performSegue(withIdentifier: "resultSegue", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let resultVC = segue.destination as! RecipeResultViewController
+        
+        resultVC.selectedRecipe = selectedRecipe
+        
+        print("HEEEEEY")
+        print(resultVC.selectedRecipe)
+        
+        
     }
     
 

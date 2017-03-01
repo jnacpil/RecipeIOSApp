@@ -22,7 +22,7 @@ class IngredientHomeModel: NSObject, URLSessionDataDelegate {
     
     var data: NSMutableData = NSMutableData()
     
-    let urlPath: String = "http://jnacpil.create.stedwards.edu/ingredients.php"
+    let urlPath: String = "http://jnacpil.create.stedwards.edu/recipeingredients.php"
     
     func downloadItems() {
         
@@ -90,10 +90,11 @@ class IngredientHomeModel: NSObject, URLSessionDataDelegate {
              
              }*/
             
-            ingredient.iID = jsonElement["iID"] as? Int
+            ingredient.iID = jsonElement["iID"] as? String
+            ingredient.rID = jsonElement["rID"] as? String
             ingredient.iName = jsonElement["iName"] as? String
-            ingredient.availAmount = jsonElement["availAmount"] as? Int
-            ingredient.iUnit = jsonElement["iUnit"] as? Int
+            ingredient.availAmount = jsonElement["availAmount"] as? String
+            ingredient.iUnit = jsonElement["iUnit"] as? String
             ingredient.uName = jsonElement["uName"] as? String
             
             ingredients.add(ingredient)

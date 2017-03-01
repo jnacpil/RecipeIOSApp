@@ -14,6 +14,7 @@
 		8B23883B1E4D2685001ED082 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B23883A1E4D2685001ED082 /* RecipeViewController.swift */; };
 		8B23883D1E515C15001ED082 /* SearchFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B23883C1E515C15001ED082 /* SearchFieldViewController.swift */; };
 		8B23883F1E515E26001ED082 /* FieldsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B23883E1E515E26001ED082 /* FieldsResultViewController.swift */; };
+		8B2388411E53BEE0001ED082 /* RecipeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2388401E53BEE0001ED082 /* RecipeResultViewController.swift */; };
 		8B72B6861E3AA07D00BAE70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6851E3AA07D00BAE70C /* AppDelegate.swift */; };
 		8B72B6881E3AA07D00BAE70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6871E3AA07D00BAE70C /* ViewController.swift */; };
 		8B72B68B1E3AA07D00BAE70C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B72B6891E3AA07D00BAE70C /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		8B72B6C11E3C330800BAE70C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6C01E3C330800BAE70C /* DetailViewController.swift */; };
 		8B72B6CC1E43B2E900BAE70C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B72B6CB1E43B2E800BAE70C /* MapKit.framework */; };
 		8B72B6D01E4403E000BAE70C /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */; };
+		8BF416CD1E66175C009E0578 /* SearchPantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF416CC1E66175C009E0578 /* SearchPantryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		8B23883A1E4D2685001ED082 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		8B23883C1E515C15001ED082 /* SearchFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFieldViewController.swift; sourceTree = "<group>"; };
 		8B23883E1E515E26001ED082 /* FieldsResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldsResultViewController.swift; path = ../FieldsResultViewController.swift; sourceTree = "<group>"; };
+		8B2388401E53BEE0001ED082 /* RecipeResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeResultViewController.swift; sourceTree = "<group>"; };
 		8B72B6821E3AA07D00BAE70C /* SeniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B72B6851E3AA07D00BAE70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B72B6871E3AA07D00BAE70C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		8B72B6C01E3C330800BAE70C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8B72B6CB1E43B2E800BAE70C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeModel.swift; path = ../RecipeModel.swift; sourceTree = "<group>"; };
+		8BF416CC1E66175C009E0578 /* SearchPantryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchPantryViewController.swift; path = ../SearchPantryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		8B72B6841E3AA07D00BAE70C /* SeniorProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BF416CC1E66175C009E0578 /* SearchPantryViewController.swift */,
 				8B72B6BE1E3ABBD600BAE70C /* LocationModel.swift */,
 				8B72B6CF1E4403E000BAE70C /* RecipeModel.swift */,
 				8B2388321E4CE755001ED082 /* IngredientModel.swift */,
@@ -139,6 +144,7 @@
 				8B2388341E4D0213001ED082 /* IngredientHomeModel.swift */,
 				8B72B6851E3AA07D00BAE70C /* AppDelegate.swift */,
 				8B72B6891E3AA07D00BAE70C /* Main.storyboard */,
+				8B2388401E53BEE0001ED082 /* RecipeResultViewController.swift */,
 				8B72B68F1E3AA07D00BAE70C /* Assets.xcassets */,
 				8B72B6911E3AA07D00BAE70C /* LaunchScreen.storyboard */,
 				8B72B6941E3AA07D00BAE70C /* Info.plist */,
@@ -315,12 +321,14 @@
 				8B72B6881E3AA07D00BAE70C /* ViewController.swift in Sources */,
 				8B2388331E4CE755001ED082 /* IngredientModel.swift in Sources */,
 				8B72B68E1E3AA07D00BAE70C /* SeniorProject.xcdatamodeld in Sources */,
+				8B2388411E53BEE0001ED082 /* RecipeResultViewController.swift in Sources */,
 				8B2388391E4D255C001ED082 /* RecipeHomeModel.swift in Sources */,
 				8B2388371E4D0364001ED082 /* PantryViewController.swift in Sources */,
 				8B72B6BD1E3ABBC400BAE70C /* HomeModel.swift in Sources */,
 				8B72B6C11E3C330800BAE70C /* DetailViewController.swift in Sources */,
 				8B23883B1E4D2685001ED082 /* RecipeViewController.swift in Sources */,
 				8B72B6BF1E3ABBD600BAE70C /* LocationModel.swift in Sources */,
+				8BF416CD1E66175C009E0578 /* SearchPantryViewController.swift in Sources */,
 				8B23883D1E515C15001ED082 /* SearchFieldViewController.swift in Sources */,
 				8B72B6861E3AA07D00BAE70C /* AppDelegate.swift in Sources */,
 				8B2388351E4D0213001ED082 /* IngredientHomeModel.swift in Sources */,

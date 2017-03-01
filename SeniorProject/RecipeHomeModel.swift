@@ -39,6 +39,7 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
         
     }
     
+    
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data)
     {
         self.data.append(data as Data)
@@ -92,7 +93,7 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
              
              }*/
             
-            recipe.rID = jsonElement["rID"] as? Int
+            recipe.rID = jsonElement["rID"] as? String
             recipe.rName = jsonElement["rName"] as? String
             recipe.rPreptime = jsonElement["rPreptime"] as? String
             recipe.rCooktime = jsonElement["rCooktime"] as? String
@@ -100,7 +101,11 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
             recipe.rDirections = jsonElement["rDirections"] as? String
             recipe.rLink = jsonElement["rLink"] as? String
             
+            print(recipe.rID)
+            
             recipes.add(recipe)
+            
+            
         }
         
         //dispatch_async(dispatch_get_main_queue(), {() -> Void in
