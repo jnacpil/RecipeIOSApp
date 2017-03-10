@@ -17,6 +17,7 @@ class IngredientModel: NSObject {
     var availAmount: String?
     var iUnit: String?
     var uName: String?
+    var amount: String?
     
     //empty constructor
     override init()
@@ -26,7 +27,7 @@ class IngredientModel: NSObject {
     
     
     
-    init(iID: String, rID: String, iName: String, availAmount: String, iUnit: String, uName: String)
+    init(iID: String, rID: String, iName: String, availAmount: String, iUnit: String, uName: String, amount: String)
     {
         self.iID = iID
         self.rID = rID
@@ -34,11 +35,12 @@ class IngredientModel: NSObject {
         self.availAmount = availAmount
         self.iUnit = iUnit
         self.uName = uName
+        self.amount = amount
     }
     
     //print object's current state
     
     override var description: String {
-        return "Id: \(iID), rID: \(rID), Name: \(iName), AvailableAmount: \(availAmount), Unit: \(uName)"
+        return "Id: \(iID), rID: \(rID), Name: \(iName), AvailableAmount: \(availAmount), Unit: \(uName), RecipeAmount: \(amount)"
     }
 }

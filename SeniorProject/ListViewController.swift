@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PantryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IngredientHomeModelProtocal {
+class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, IngredientHomeModelProtocal {
     
     var feedItems: NSArray = NSArray()
     //var selectedIngredient: IngredientModel = IngredientModel()
@@ -42,7 +42,7 @@ class PantryViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    func itemsDownloaded(items: NSArray) {
+    func ingredientsDownloaded(items: NSArray) {
         feedItems = items
         
         

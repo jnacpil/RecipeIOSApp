@@ -10,7 +10,7 @@ import Foundation
 
 
 protocol RecipeHomeModelProtocal: class {
-    func itemsDownloaded(items: NSArray)
+    func recipesDownloaded(items: NSArray)
 }
 
 
@@ -78,20 +78,7 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
             let recipe = RecipeModel()
             
             //the following insures none of the jsonelemnt calues are nil through option binding
-            /*if let id = jsonElement["Id"] as? Int,
-             let name = jsonElement["Name"] as? String,
-             let address = jsonElement["Address"] as? String,
-             let latitude = jsonElement["Latitude"] as? String,
-             let longitude = jsonElement["Longitude"] as? String,
-             let type = jsonElement["Type"] as? Int
-             {
-             self.rPreptime = rPreptime
-             self.rCooktime = rCooktime
-             self.rServings = rServings
-             self.rDirections = rDirections
-             self.rLink = rLink
-             
-             }*/
+            
             
             recipe.rID = jsonElement["rID"] as? String
             recipe.rName = jsonElement["rName"] as? String
@@ -100,6 +87,7 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
             recipe.rServings = jsonElement["rServings"] as? String
             recipe.rDirections = jsonElement["rDirections"] as? String
             recipe.rLink = jsonElement["rLink"] as? String
+            recipe.rCategory = jsonElement["rCategory"] as? String
             
             print(recipe.rID)
             
@@ -113,11 +101,11 @@ class RecipeHomeModel: NSObject, URLSessionDataDelegate {
         //})
         
         DispatchQueue.main.async(execute: { () -> Void in
-            self.delegate.itemsDownloaded(items: recipes)
+            self.delegate.recipesDownloaded(items: recipes)
         })
         
         print(jsonResult)
-        //self.delegate.itemsDownloaded(items: markets)
+        
     }
     
     

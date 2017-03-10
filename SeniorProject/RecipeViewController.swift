@@ -33,7 +33,7 @@ class RecipeViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    func itemsDownloaded(items: NSArray) {
+    func recipesDownloaded(items: NSArray) {
         feedItems = items
         self.listTableView.reloadData()
     }

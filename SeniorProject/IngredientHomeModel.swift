@@ -9,7 +9,7 @@
 import Foundation
 
 protocol IngredientHomeModelProtocal: class {
-    func itemsDownloaded(items: NSArray)
+    func ingredientsDownloaded(items: NSArray)
 }
 
 
@@ -96,6 +96,7 @@ class IngredientHomeModel: NSObject, URLSessionDataDelegate {
             ingredient.availAmount = jsonElement["availAmount"] as? String
             ingredient.iUnit = jsonElement["iUnit"] as? String
             ingredient.uName = jsonElement["uName"] as? String
+            ingredient.amount = jsonElement["amount"] as? String
             
             ingredients.add(ingredient)
             
@@ -106,7 +107,7 @@ class IngredientHomeModel: NSObject, URLSessionDataDelegate {
         //})
         
         DispatchQueue.main.async(execute: { () -> Void in
-            self.delegate.itemsDownloaded(items: ingredients)
+            self.delegate.ingredientsDownloaded(items: ingredients)
         })
         
         print(jsonResult)

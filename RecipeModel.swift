@@ -17,6 +17,7 @@ class RecipeModel: NSObject {
     var rServings: String?
     var rDirections: String?
     var rLink: String?
+    var rCategory: String?
     
     //empty constructor
     override init()
@@ -26,7 +27,7 @@ class RecipeModel: NSObject {
     
     //construct with @id, @name, @addess, @latitude, @longitude, @type
     
-    init(rID: String, rName: String, rPreptime: String, rCooktime: String, rServings: String, rDirections: String, rLink: String)
+    init(rID: String, rName: String, rPreptime: String, rCooktime: String, rServings: String, rDirections: String, rLink: String, rCategory: String)
     {
         self.rID = rID
         self.rName = rName
@@ -35,11 +36,12 @@ class RecipeModel: NSObject {
         self.rServings = rServings
         self.rDirections = rDirections
         self.rLink = rLink
+        self.rCategory = rCategory
     }
     
     //print object's current state
     
     override var description: String {
-        return "Id: \(rID), Name: \(rName), Preptime: \(rPreptime), Cooktime: \(rCooktime), Servings: \(rServings), Directions: \(rDirections), Link: \(rLink)"
+        return "Id: \(rID), Name: \(rName), Preptime: \(rPreptime), Cooktime: \(rCooktime), Servings: \(rServings), Directions: \(rDirections), Link: \(rLink), Category: \(rCategory)"
     }
 }

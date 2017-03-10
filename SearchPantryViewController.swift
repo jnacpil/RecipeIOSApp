@@ -13,14 +13,16 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
     
     var feedItems: NSArray = NSArray()
     var selectedIngredient: IngredientModel = IngredientModel()
+    var allSelected = [IngredientModel]()
     var compareArray = [IngredientModel]()
+    
     @IBOutlet weak var listTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        listTableView.rowHeight = 55
         
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
@@ -34,7 +36,7 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
     
     
     
-    func itemsDownloaded(items: NSArray) {
+    func ingredientsDownloaded(items: NSArray) {
         feedItems = items
         let compare: NSMutableArray = NSMutableArray()
         
@@ -50,9 +52,9 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
             {
                 
                 //var passedfilter: Bool = false
-                print(itemtofilter.availAmount!)
+                
                 let intAvail: Int = Int(itemtofilter.availAmount!)!
-                print(intAvail)
+                
                 
                 if(intAvail != 0)
                 {
@@ -91,16 +93,47 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
     {
         
         let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        let myCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomTableViewCell
         
         
         let item: IngredientModel = compareArray[indexPath.row] 
         
         
-        myCell.textLabel!.text = item.iName
+        myCell.nameLabel.text = item.iName
+        myCell.avaiLabel.text = item.availAmount
+        myCell.unitLabel.text = item.uName
+        
+        myCell.show(availAmount: item.availAmount!, uName: item.uName!)
         
         return myCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
+        
+        selectedIngredient = feedItems[indexPath.row]as! IngredientModel
+        allSelected.append(selectedIngredient)
+        
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueSearch") {
+        let resultVC = segue.destination as! PantryResultViewController
+        
+        resultVC.allSelected = allSelected
+        
+        print(allSelected)
+        print("HEEEEEY")
+        
+        }
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

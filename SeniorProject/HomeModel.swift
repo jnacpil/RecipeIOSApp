@@ -101,9 +101,6 @@ class HomeModel: NSObject, URLSessionDataDelegate {
             markets.add(market)
         }
         
-        //dispatch_async(dispatch_get_main_queue(), {() -> Void in
-          //  self.delegate.itemDownloaded(locations)
-        //})
         
         DispatchQueue.main.async(execute: { () -> Void in
             self.delegate.itemsDownloaded(items: markets)
