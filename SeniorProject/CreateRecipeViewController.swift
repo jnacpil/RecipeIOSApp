@@ -115,7 +115,7 @@ class CreateRecipeViewController: UIViewController{
             let alert = UIAlertController(title:"Recipe Created", message: error, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title:"OK", style: .default, handler: { action in
                 
-                self.performSegue(withIdentifier: "addSegue", sender: self)
+                self.performSegue(withIdentifier: "endSegue", sender: self)
                 
                 
                 //self.dismissViewControllerAnimated(true, completion:nil)
@@ -130,14 +130,14 @@ class CreateRecipeViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if (segue.identifier == "addSegue") {
         let resultVC = segue.destination as! AddIngredientsViewController
         
         resultVC.sentRecipeName = createdRecipe.rName
         
         print("HEEEEEY")
         
-        
+        }
         
     }
     

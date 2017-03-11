@@ -98,7 +98,7 @@ class PantryResultViewController: UIViewController, UITableViewDataSource, UITab
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         
         
-        let item: RecipeModel = filteredItems[indexPath.row] as! RecipeModel
+        let item: RecipeModel = filteredItems[indexPath.row] 
         
         
         myCell.textLabel!.text = item.rName

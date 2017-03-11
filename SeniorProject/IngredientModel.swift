@@ -15,7 +15,7 @@ class IngredientModel: NSObject {
     var rID: String?
     var iName: String?
     var availAmount: String?
-    var iUnit: String?
+    //var iUnit: String?
     var uName: String?
     var amount: String?
     
@@ -27,13 +27,13 @@ class IngredientModel: NSObject {
     
     
     
-    init(iID: String, rID: String, iName: String, availAmount: String, iUnit: String, uName: String, amount: String)
+    init(iID: String, rID: String, iName: String, availAmount: String, uName: String, amount: String)
     {
         self.iID = iID
         self.rID = rID
         self.iName = iName
         self.availAmount = availAmount
-        self.iUnit = iUnit
+        //self.iUnit = iUnit
         self.uName = uName
         self.amount = amount
     }

@@ -94,7 +94,7 @@ class IngredientHomeModel: NSObject, URLSessionDataDelegate {
             ingredient.rID = jsonElement["rID"] as? String
             ingredient.iName = jsonElement["iName"] as? String
             ingredient.availAmount = jsonElement["availAmount"] as? String
-            ingredient.iUnit = jsonElement["iUnit"] as? String
+            //ingredient.iUnit = jsonElement["iUnit"] as? String
             ingredient.uName = jsonElement["uName"] as? String
             ingredient.amount = jsonElement["amount"] as? String
             

@@ -16,6 +16,9 @@ class RecipeResultViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var prepLabel: UILabel!
     @IBOutlet weak var cookLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
+    @IBOutlet weak var directionLabel: UILabel!
+    
+    
     @IBOutlet weak var detailTable: UITableView!
     
     
@@ -34,6 +37,7 @@ class RecipeResultViewController: UIViewController, UITableViewDataSource, UITab
         prepLabel.text = selectedRecipe?.rPreptime
         cookLabel.text = selectedRecipe?.rCooktime
         linkLabel.text = selectedRecipe?.rLink
+        directionLabel.text = selectedRecipe?.rDirections
 
         
         self.detailTable.delegate = self
@@ -122,7 +126,7 @@ class RecipeResultViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let resultVC = segue.destination as! ListViewController
         
@@ -132,7 +136,7 @@ class RecipeResultViewController: UIViewController, UITableViewDataSource, UITab
         print(resultVC.selectedRecipeID)
         
         
-    }
+    }*/
 
     /*
     // MARK: - Navigation

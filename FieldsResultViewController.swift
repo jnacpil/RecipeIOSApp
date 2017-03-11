@@ -44,6 +44,9 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
     
     func recipesDownloaded(items: NSArray) {
         feedItems = items
+        print("PASSSED ENTREE")
+        print(passedEntree)
+        
         
         for i in 0..<(feedItems.count)
         {
@@ -95,8 +98,10 @@ class FieldsResultViewController: UIViewController, UITableViewDataSource, UITab
                 }
                 if(passedEntree != "")
                 {
+                    let filterName: String = (itemtofilter.rName)!.lowercased()
+                
                     
-                    if((itemtofilter.rName?.range(of: passedEntree!)) != nil)
+                    if((filterName.range(of: passedEntree!)) != nil)
                     {
                         print("passedEntree: true")
                         passedfilter = true

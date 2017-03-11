@@ -69,6 +69,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if (segue.identifier == "detailSegue") {
+        
         let detailVC = segue.destination as! DetailViewController
         
         detailVC.selectedLocation = selectedLocation
@@ -76,7 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("HEEEEEY")
         print(detailVC.selectedLocation)
         
-        
+        }
     }
 
     override func didReceiveMemoryWarning() {

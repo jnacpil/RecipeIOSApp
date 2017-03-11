@@ -37,7 +37,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="rno-P4-UBf">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="g6W-fg-9cU"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ref-L1-5uy"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="g6W-fg-9cU">
+                            <connections>
+                                <segue destination="8kr-op-riZ" kind="show" id="f5C-2a-Wyq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="aFG-cx-inX" id="8Zh-Yi-bh0"/>
@@ -75,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="2796" y="138.98050974512745"/>
         </scene>
-        <!--Search Field View Controller-->
+        <!--Search-->
         <scene sceneID="Qdr-sJ-J5Z">
             <objects>
                 <viewController id="6ZO-UJ-9sE" customClass="SearchFieldViewController" customModule="SeniorProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +142,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eyF-Y4-ixl" kind="modal" identifier="segueSearch" id="GzJ-S2-2Dz"/>
+                                    <segue destination="eyF-Y4-ixl" kind="show" identifier="segueSearch" id="GzJ-S2-2Dz"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qr2-M8-S3y">
@@ -164,6 +169,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Search" id="rad-2j-zUj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nIb-MR-tje"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="SAI-Jq-LSc">
+                            <connections>
+                                <segue destination="8kr-op-riZ" kind="show" id="Y5m-sA-WYn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CookTimeTF" destination="gtj-hi-UQE" id="KV3-Qk-n9W"/>
                         <outlet property="EntreeTF" destination="Czj-6O-21s" id="0e8-7b-5Xc"/>
@@ -172,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSZ-iq-Zr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642.39999999999998" y="-1307.4962518740631"/>
+            <point key="canvasLocation" x="296.80000000000001" y="-1307.4962518740631"/>
         </scene>
         <!--Fields Result View Controller-->
         <scene sceneID="nPs-5u-qO0">
@@ -212,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIs-i1-zmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="-1299.400299850075"/>
+            <point key="canvasLocation" x="1120.8" y="-1299.400299850075"/>
         </scene>
         <!--Recipe Result View Controller-->
         <scene sceneID="2XO-QU-bYH">
@@ -227,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pOa-qp-uKo">
-                                <frame key="frameInset" minY="315" width="375" height="352"/>
+                                <frame key="frameInset" minY="403" width="375" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -269,13 +282,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZY-1T-3qy">
-                                <frame key="frameInset" minX="83" minY="40" width="208" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serv." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZl-g3-jQM">
                                 <frame key="frameInset" minX="75" minY="114" width="45" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -318,27 +324,35 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2d-jO-HoU">
-                                <frame key="frameInset" minX="11" minY="164" width="173" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZY-1T-3qy">
+                                <frame key="frameInset" minX="83" minY="67" width="208" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add to Shopping List">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cIT-kM-X8f" kind="modal" id="FsF-MR-laU"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5xV-yT-oTk">
-                                <frame key="frameInset" minX="16" minY="263" width="194" height="29"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-0A-JQc">
+                                <frame key="frameInset" minX="16" minY="150" width="343" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Ingredients"/>
-                                    <segment title="Instructions"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35V-pQ-cnV">
+                                <frame key="frameInset" minY="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="0Ba-ST-xMq">
+                                        <barButtonItem key="rightBarButtonItem" title="Home" id="YgG-6E-9ks">
+                                            <connections>
+                                                <segue destination="8kr-op-riZ" kind="show" id="UT3-CA-mbu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWL-sF-Llp">
-                                <frame key="frameInset" minX="16" minY="213" width="343" height="28"/>
+                                <frame key="frameInset" minX="16" minY="367" width="343" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -351,6 +365,7 @@
                     <connections>
                         <outlet property="cookLabel" destination="Mxu-DZ-MpB" id="zor-Ub-4Me"/>
                         <outlet property="detailTable" destination="pOa-qp-uKo" id="IqX-iL-NAA"/>
+                        <outlet property="directionLabel" destination="qgA-0A-JQc" id="Nnb-fg-n4D"/>
                         <outlet property="linkLabel" destination="iWL-sF-Llp" id="nxb-ZV-KMC"/>
                         <outlet property="prepLabel" destination="6mk-p6-kr6" id="YGe-kg-IVv"/>
                         <outlet property="recipeTitle" destination="BZY-1T-3qy" id="SVa-g1-Geo"/>
@@ -359,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhM-6O-6iS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141.5999999999999" y="-1522.488755622189"/>
+            <point key="canvasLocation" x="2224.8000000000002" y="-1299.400299850075"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="niz-Y4-Zt8">
@@ -394,11 +409,7 @@
                                 <items>
                                     <navigationItem title="Shopping List" id="TpT-jn-WgM">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="jLG-b8-6nn"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="PKk-YS-yj5">
-                                            <connections>
-                                                <segue destination="8kr-op-riZ" kind="modal" id="xgK-nx-cYx"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="PKk-YS-yj5"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -411,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9O-0N-gmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304.8000000000002" y="-1522.488755622189"/>
+            <point key="canvasLocation" x="3244" y="-1522.488755622189"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="ynN-3d-B1d">
@@ -449,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZ1-d0-6v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1692" y="-690"/>
+            <point key="canvasLocation" x="4060" y="-1522.488755622189"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="SzS-IC-BNu">
@@ -474,7 +485,7 @@
                                 <frame key="frameInset" minX="132" minY="444" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                <state key="normal" title="Locations">
+                                <state key="normal" title="Markets">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -489,7 +500,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6ZO-UJ-9sE" kind="modal" id="Pul-eB-ZiM"/>
+                                    <segue destination="6ZO-UJ-9sE" kind="show" id="yFJ-nG-Ker"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-Ft-nfv">
@@ -501,17 +512,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="ExB-O3-8yn" kind="modal" id="p8g-rO-7la"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIg-MU-O1e">
-                                <frame key="frameInset" minX="115" minY="519" width="144" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                <state key="normal" title="Shopping List">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cIT-kM-X8f" kind="modal" id="2RG-Pi-2sO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-jD-5d4">
@@ -528,9 +528,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="5M9-FI-6UQ">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="cyU-jI-ROg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Main Menu" id="5M9-FI-6UQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNW-Ze-eSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -605,7 +603,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Search" id="1Yc-NT-g11">
                                             <connections>
                                                 <action selector="searchButton:" destination="ExB-O3-8yn" id="nYp-j0-FLq"/>
-                                                <segue destination="F3i-JD-GQh" kind="modal" identifier="segueSearch" id="mgw-wQ-GLQ"/>
+                                                <segue destination="F3i-JD-GQh" kind="show" identifier="segueSearch" id="mgw-wQ-GLQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -681,7 +679,7 @@
                                         <barButtonItem key="backBarButtonItem" title="Back" id="yA1-Aa-6wN"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="xMf-D3-MsR">
                                             <connections>
-                                                <segue destination="8kr-op-riZ" kind="modal" id="gV8-Z5-RRL"/>
+                                                <segue destination="8kr-op-riZ" kind="show" identifier="endSegue" id="jF2-oh-Wyg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -885,8 +883,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FsF-MR-laU"/>
-        <segue reference="HSM-xb-Hay"/>
-        <segue reference="gV8-Z5-RRL"/>
+        <segue reference="UT3-CA-mbu"/>
+        <segue reference="oGP-Rx-RiP"/>
     </inferredMetricsTieBreakers>
 </document>

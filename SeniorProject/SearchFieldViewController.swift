@@ -32,8 +32,9 @@ class SearchFieldViewController: UIViewController {
             
             svc.passedPrepTime = PrepTimeTF.text
             svc.passedCookTime = CookTimeTF.text
-            svc.passedEntree = EntreeTF.text
+            svc.passedEntree = (EntreeTF.text)?.lowercased()
            
+            
         }
     }
 
