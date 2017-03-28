@@ -24,10 +24,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell" rowHeight="56" id="o2z-xF-YLD">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2z-xF-YLD" id="egu-hd-5VT">
-                                            <frame key="frameInset" width="375" height="56"/>
+                                            <frame key="frameInset" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -37,7 +37,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Locations" id="rno-P4-UBf">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="ref-L1-5uy"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="g6W-fg-9cU">
                             <connections>
                                 <segue destination="8kr-op-riZ" kind="show" id="f5C-2a-Wyq"/>
@@ -80,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="2796" y="138.98050974512745"/>
         </scene>
-        <!--Search-->
+        <!--Search Field View Controller-->
         <scene sceneID="Qdr-sJ-J5Z">
             <objects>
                 <viewController id="6ZO-UJ-9sE" customClass="SearchFieldViewController" customModule="SeniorProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,20 +144,6 @@
                                     <segue destination="eyF-Y4-ixl" kind="show" identifier="segueSearch" id="GzJ-S2-2Dz"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qr2-M8-S3y">
-                                <frame key="frameInset" minY="20" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="kOT-DB-uQ0">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="hzA-Xs-zJq"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7dk-oh-vKM">
-                                            <connections>
-                                                <segue destination="8kr-op-riZ" kind="modal" id="iY7-6J-e1M"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advanced Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-Kx-4k8">
                                 <frame key="frameInset" minX="91" minY="92" width="193" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,16 +152,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.33409653465346545" green="0.16883225808181687" blue="0.0033654922275071159" alpha="0.74956311677631582" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="rad-2j-zUj">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="nIb-MR-tje"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="SAI-Jq-LSc">
-                            <connections>
-                                <segue destination="8kr-op-riZ" kind="show" id="Y5m-sA-WYn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="CookTimeTF" destination="gtj-hi-UQE" id="KV3-Qk-n9W"/>
                         <outlet property="EntreeTF" destination="Czj-6O-21s" id="0e8-7b-5Xc"/>
@@ -208,7 +185,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KAY-Ic-hc0" id="9RK-Pc-bhV">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -227,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="1120.8" y="-1299.400299850075"/>
         </scene>
-        <!--Recipe Result View Controller-->
+        <!--Selected Recipe-->
         <scene sceneID="2XO-QU-bYH">
             <objects>
                 <viewController id="hh0-Qf-Zrf" customClass="RecipeResultViewController" customModule="SeniorProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pOa-qp-uKo">
-                                <frame key="frameInset" minY="403" width="375" height="264"/>
+                                <frame key="frameInset" minY="415" width="375" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -338,19 +315,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35V-pQ-cnV">
-                                <frame key="frameInset" minY="28" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="0Ba-ST-xMq">
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="YgG-6E-9ks">
-                                            <connections>
-                                                <segue destination="8kr-op-riZ" kind="show" id="UT3-CA-mbu"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWL-sF-Llp">
                                 <frame key="frameInset" minX="16" minY="367" width="343" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -358,10 +322,31 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyh-xT-KXo">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="4B8-8V-9lq">
+                                        <barButtonItem key="backBarButtonItem" title="Selected" id="JNj-X6-5Tt"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="ed6-8h-qNT">
+                                            <connections>
+                                                <segue destination="YJ2-BM-FXc" kind="show" id="cWA-pJ-x3v"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3340965347" green="0.16883225809999999" blue="0.0033654922279999998" alpha="0.74956311679999998" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cEc-2P-exe"/>
+                    <navigationItem key="navigationItem" title="Selected Recipe" id="4c3-Bl-9Rb">
+                        <barButtonItem key="backBarButtonItem" title="Selected" id="RSx-at-dfz"/>
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Qdq-X8-6Yc">
+                            <connections>
+                                <segue destination="YJ2-BM-FXc" kind="show" id="BAd-iJ-Rf1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cookLabel" destination="Mxu-DZ-MpB" id="zor-Ub-4Me"/>
                         <outlet property="detailTable" destination="pOa-qp-uKo" id="IqX-iL-NAA"/>
@@ -397,7 +382,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aAt-bb-oFh" id="jPP-bf-oZZ">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -445,7 +430,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vwy-ss-CZM" id="8w3-ib-eYc">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -474,26 +459,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whip It Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbf-lN-fNY">
-                                <frame key="frameInset" minX="96" minY="88" width="178" height="81"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="croppedhomepage" translatesAutoresizingMaskIntoConstraints="NO" id="vLB-lU-FMQ">
+                                <frame key="frameInset" minX="-2" width="377" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-ee-rDK">
-                                <frame key="frameInset" minX="132" minY="444" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                <state key="normal" title="Markets">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jXQ-f0-moy" kind="modal" id="sMa-Wi-bc1"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cff-Ir-RGs">
-                                <frame key="frameInset" minX="141" minY="372" width="89" height="30"/>
+                                <frame key="frameInset" minX="141" minY="405" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <state key="normal" title="Search">
@@ -504,7 +475,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-Ft-nfv">
-                                <frame key="frameInset" minX="141" minY="304" width="89" height="30"/>
+                                <frame key="frameInset" minX="141" minY="318" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <state key="normal" title="Pantry">
@@ -514,8 +485,8 @@
                                     <segue destination="ExB-O3-8yn" kind="modal" id="p8g-rO-7la"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-jD-5d4">
-                                <frame key="frameInset" minX="98" minY="237" width="178" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-jD-5d4">
+                                <frame key="frameInset" minX="98" minY="234" width="178" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <state key="normal" title="Create a Recipe">
@@ -523,6 +494,24 @@
                                 </state>
                                 <connections>
                                     <segue destination="IAa-A4-IYa" kind="modal" id="TWL-7p-xTQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whip It Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVz-hA-L85">
+                                <frame key="frameInset" minX="92" minY="99" width="187" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="43"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-ee-rDK">
+                                <frame key="frameInset" minX="132" minY="485" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                <state key="normal" title="Markets">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jXQ-f0-moy" kind="modal" id="sMa-Wi-bc1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -555,7 +544,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FWy-nw-Lii" id="OIX-9y-atI">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <frame key="frameInset" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="avail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7d-kT-qEV">
@@ -594,10 +583,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Pantry" id="p6w-Vu-Rbt">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="iJ1-ge-r3N"/>
+                                        <barButtonItem key="backBarButtonItem" title="Pantry" id="iJ1-ge-r3N"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="VbW-Ty-wa9">
                                             <connections>
-                                                <segue destination="8kr-op-riZ" kind="modal" id="h0t-lb-iAJ"/>
+                                                <segue destination="YJ2-BM-FXc" kind="modal" id="Y8B-1v-NnK"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Search" id="1Yc-NT-g11">
@@ -641,7 +630,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bc-9w-dx0" id="1R1-6f-Ia3">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -653,6 +642,7 @@
                     <connections>
                         <outlet property="listTableView" destination="YFw-nV-tex" id="V8g-Sb-OaE"/>
                         <segue destination="hh0-Qf-Zrf" kind="show" identifier="resultSegue" id="HSM-xb-Hay"/>
+                        <segue destination="ExB-O3-8yn" kind="show" identifier="backSegue" id="w5s-fV-JDU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAo-nT-6Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -760,7 +750,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3340965347" green="0.16883225809999999" blue="0.0033654922279999998" alpha="0.74956311679999998" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="fieldCook" destination="9rs-jm-xKt" id="9ua-Ok-MtV"/>
@@ -788,61 +778,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-Jo-yoU">
-                                <frame key="frameInset" minX="207" minY="231" width="97" height="30"/>
+                                <frame key="frameInset" minX="207" minY="176" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gip-6b-84Z">
-                                <frame key="frameInset" minX="207" minY="318" width="97" height="30"/>
+                                <frame key="frameInset" minX="207" minY="238" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5J-Qu-2nn">
-                                <frame key="frameInset" minX="207" minY="410" width="97" height="30"/>
+                                <frame key="frameInset" minX="207" minY="299" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-ay-3iV">
-                                <frame key="frameInset" minX="49" minY="236" width="45" height="21"/>
+                                <frame key="frameInset" minX="71" minY="174" width="57" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEL-JR-pSg">
-                                <frame key="frameInset" minX="52" minY="323" width="60" height="21"/>
+                                <frame key="frameInset" minX="71" minY="238" width="76" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-xd-M5z">
-                                <frame key="frameInset" minX="52" minY="415" width="32" height="21"/>
+                                <frame key="frameInset" minX="71" minY="299" width="42" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Ingredient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-vP-IIG">
-                                <frame key="frameInset" minX="131" minY="111" width="113" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-vP-IIG">
+                                <frame key="frameInset" minX="115" minY="93" width="144" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m14-aK-wgL">
+                                <frame key="frameInset" minY="368" width="375" height="299"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7f-do-5iU">
+                                <frame key="frameInset" minY="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="TCp-Yf-YSF">
+                                        <barButtonItem key="backBarButtonItem" title="Home" id="wPq-OT-4ik"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="Z3M-xG-1ou">
+                                            <connections>
+                                                <segue destination="8kr-op-riZ" kind="show" id="Ozw-ad-PAu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3340965347" green="0.16883225809999999" blue="0.0033654922279999998" alpha="0.74956311679999998" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jx3-XB-JGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="1175"/>
+            <point key="canvasLocation" x="1125.5999999999999" y="1174.3628185907048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KJ9-nR-JZt">
@@ -882,8 +891,13 @@
             <point key="canvasLocation" x="-2199" y="61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="croppedhomepage" width="314" height="576"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jF2-oh-Wyg"/>
-        <segue reference="oGP-Rx-RiP"/>
+        <segue reference="f5C-2a-Wyq"/>
+        <segue reference="w5s-fV-JDU"/>
+        <segue reference="HSM-xb-Hay"/>
+        <segue reference="cWA-pJ-x3v"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,7 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
     var selectedIngredient: IngredientModel = IngredientModel()
     var allSelected = [IngredientModel]()
     var compareArray = [IngredientModel]()
+    var allIngredients = [IngredientModel]()
     
     @IBOutlet weak var listTableView: UITableView!
 
@@ -62,12 +63,14 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
                     if (compare.contains(itemtofilter.iID!))
                     {
                         filter = false
+                        
                     }
                     else
                     {
                         compare.add(itemtofilter.iID!)
                         compareArray.append(itemtofilter)
                         filter = false
+                        
                     }
                     
                 }else
@@ -113,7 +116,7 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
         let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
         
-        selectedIngredient = feedItems[indexPath.row]as! IngredientModel
+        selectedIngredient = compareArray[indexPath.row]
         allSelected.append(selectedIngredient)
         
         
@@ -123,11 +126,26 @@ class SearchPantryViewController: UIViewController, UITableViewDataSource, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueSearch") {
         let resultVC = segue.destination as! PantryResultViewController
-        
+            /*
+            for i in 0..<(feedItems.count)
+            {
+                //let itemtofilter = allIngredients[i]
+                let itemtofilter = feedItems[i] as! IngredientModel
+                for j in 0..<(allSelected.count)
+                {
+                    let selectedtofilter = allSelected[j]
+                    if(selectedtofilter.iID! == itemtofilter.iID!)
+                    {
+                        allIngredients.append(itemtofilter)
+                        
+                    }
+                }
+            }
+        resultVC.allIngredients = allIngredients */
         resultVC.allSelected = allSelected
         
         print(allSelected)
-        print("HEEEEEY")
+      
         
         }
         

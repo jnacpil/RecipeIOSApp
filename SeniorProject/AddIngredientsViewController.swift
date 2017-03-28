@@ -10,7 +10,8 @@ import UIKit
 
 class AddIngredientsViewController: UIViewController {
     
-    var sentRecipeName : String?
+    var sentRecipeName : String!
+    //var feedItems: 
 
     override func viewDidLoad() {
         super.viewDidLoad()
